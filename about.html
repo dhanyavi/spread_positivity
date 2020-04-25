@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Spread Positivity</title>
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style type="text/css">
+
+	img{
+		border-radius: 50%;
+		width: 200px;
+	}
+
+	h1{
+		position: relative;
+		top: 10px;
+	}
+
+	html{
+	scroll-behavior: smooth;
+}
+
+
+*{margin: 0; padding: 0; box-sizing: border-box; 
+	font-family: 'Poppins', sans-serif;}
+
+a{ text-decoration: none; }
+
+a:hover{text-decoration: none;}
+
+li{ list-style: none; }
+
+p{
+	font-size: 0.9rem;
+	line-height: 1.6;
+	font-weight: 400;
+	color: #606060;
+
+}
+
+
+
+.extra-div h2, .servicediv h2{
+
+	font-size: 0.9rem;
+	margin: 20px 0 15px 0;
+	font-weight: bold;
+	line-height: 1.1;
+	word-spacing: 4px;
+}
+
+
+/* **************************acutual css ********************************/
+
+	.header{
+
+width: 100%;
+height: 100vh;
+background-color: #BA4A00  ;
+background-repeat:no-repeat;
+background-size: 100% 100%;
+position: relative;
+
+}
+.header:before{
+
+	content: "";
+	position: absolute;
+	top: 0%;
+	bottom: 0%;
+	left: 0%;
+	right: 0%;
+	opacity: .4;
+	z-index: -1;
+	background: linear-gradient(to right, #1e5799 0%, #3ccdbb 0%, #16c9f6 100%);
+
+
+}
+
+
+
+
+.navbar:before{
+	content: "";
+	position: absolute;
+
+	top: 0%;
+	bottom: 0%;
+	left: 0;
+	right: 0;
+	opacity: .3;
+	z-index: -1;
+	background:black;
+
+}
+
+
+.navbar-nav li a{
+	
+	color: #fff !important;
+	font-weight: bold;
+
+}
+
+
+
+.header-section{
+
+	width: 100%;
+	height: inherit;
+	color: white;
+	text-align: center;
+	position: relative;
+
+}
+.center-div{
+	width: 100%;
+	height: auto;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+
+}
+
+.header-buttons{
+	position: relative;
+	top: 30px;
+}
+
+.header-buttons a{
+
+	border: 1px solid #fff;
+	border-radius: 100px;
+	margin: 0 5px;
+	padding: 12px 35px;
+	outline: none;
+	color:#fff;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.4;
+	text-align: center;
+
+}
+
+.header-buttons a:hover{
+	color:#50d1c0;
+	background-color:#fff;
+	text-decoration: none;
+	box-shadow:0 0 20px 0 rgba(0,0,0,0.3);  
+
+}
+.center-div p{
+
+	font-size: 1.3rem;
+	padding: 10px 0 20px 0;
+	color: white;
+
+}
+
+
+/*************************************extra card*****************************/
+
+
+.header-extradiv{
+	width: 100%; height: auto;
+	margin: 100px 0;
+	text-align: center;
+
+
+}
+
+.extra-div{
+	background: #fff;
+	border: medium none;
+	margin-bottom: 40px !important;
+	padding: 60px !important;
+	border-radius: 3px;
+	transition: 0.3s;
+
+}
+
+.extra-div:hover{
+	box-shadow: 0 0 20px 0 rgba(0,0,0,0.3);
+	transform: translateY(-20px);
+
+}
+
+
+
+/********************* footer start**************************** */
+
+.footersection{
+	width: 100%;
+	height: auto;
+	padding: 70px 0 20px 0;
+	background:  #BA4A00;
+	position: relative;
+}
+
+.footersection p{
+	color: #fff;
+}
+
+.container li a{
+	font-size: 0.9rem;
+	line-height: 1.6;
+	font-weight: 400;
+	color: #fff;
+	text-transform: capitalize;
+	text-align: center;
+}
+
+.footersection h3{
+	text-transform: uppercase;
+	color: #fff;
+	margin-bottom: 25px;
+	font-size: 1.2rem!important;
+	font-weight: 600;
+	text-shadow: 0 2px 5px rgbe(0,0,0,0.4);
+}
+
+#myBtn{
+	/*display: none;*/
+	position: fixed;
+	bottom: 20px;
+	right: 40px;
+	z-index: 99;
+	border: none;
+	color: #fff;
+	background: #00abff;
+	padding: 10px;
+	border-radius: 10px;
+
+}
+
+
+
+#myBtn:hover{
+	background: #606060;
+}
+
+/********************* footer end**************************** */
+
+
+
+
+/******************************************************************/
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.flip-card {
+	margin: 50px;
+	
+	position: relative;
+	left: 170px;
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+
+</style>
+</head>
+<body>
+
+	
+	<div class="header" id="topheader">
+	<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+		<div class="container p-2">
+  <a class="navbar-brand text-white " href="index.html">_.Spread_Positivity_</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="inspirational.html">Inspirational</a>
+      </li>
+       <li class="nav-item">
+        <a class="nav-link" href="life.html">Life</a>
+      </li>
+       <li class="nav-item">
+        <a class="nav-link" href="about.html">AboutUs</a>
+      </li>
+
+
+     
+    </ul>
+   
+  </div>
+</div>
+</nav>
+
+<section class="header-section">
+	<div class="center-div">
+		<img src="image/sp.jpeg">
+		<h1 class="font-weight-bold">About</h1>
+		<h1 class="font-weight-bold"> _.Spread_Positivity_</h1>
+		
+		<div class="header-buttons">
+			<a href="login.html">SignIn</a>
+			<a href="#contactid">SignUp</a>
+			
+		</div>
+
+	</div>
+
+</section>
+	
+</div>
+
+<!-- *************************header part end **************************** -->
+
+
+<!-- ********************* three extra header div start *****************************-->
+
+<div class="container headings text-center"><br>
+    <h2 class="text-center font-weight-bold">OWNERS</h2>
+  </div>
+
+<div class="container">
+<div class="row">
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="G:\Spread positivity\user.jpg" alt="Avatar" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>Dhanyavi Goti</h1>
+      <h1>19SE02CE025</h1> 
+      
+    </div>
+  </div>
+</div>
+
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="G:\Spread positivity\user.jpg" alt="Avatar" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>Dhruvi Godhani</h1> 
+      <h1>19SE02CE023</h1> 
+    </div>
+  </div>
+</div>
+
+</div>
+</div><br><br>
+
+
+<!-- ********************* three extra header div end *****************************-->
+
+
+
+
+<!-- ********************* contact us start****************************-->
+
+
+<section class="contactus" id="contactid" >
+  <div class="container headings text-center">
+    <h1 class="text-center font-weight-bold">Contact Us</h1>
+    <p><h6>GIVE YOUR IDEAS</p>
+  </div><br>
+
+  	<div class="container">
+  		<div class="row">
+  				<div class="col-lg-8 col-md-8 col-10 offset-lg-2 offset-md-2 offset-1">
+
+  					<form action="/action_page.php">
+  						<div class="form-group">
+    						
+    							<input type="text" class="form-control" id="username" required autocomplete="off" placeholder="Enet Your Name">
+  						</div>
+
+  						<form action="/action_page.php">
+  						<div class="form-group">
+    						
+    							<input type="email" class="form-control" id="email" required autocomplete="off" placeholder="Enter email">
+  						</div>
+
+  						<form action="/action_page.php">
+  						<div class="form-group">
+    						
+    							<input type="number" class="form-control" id="mobile" required autocomplete="off" placeholder="Enter Mobile Number">
+  						</div>
+
+  						<div class="form-group">
+<!--   						<label for="comment">Comment:</label>
+  	 -->					<textarea class="form-control" rows="4" id="comment" required autocomplete="off"
+ 							placeholder="Enter Your Massages">
+ 							</textarea>
+						</div>
+
+						<div class="d-flex justify-content-center form-button">
+  						<button type="submit" class="btn btn-primary">Submit</button>
+  						</div>
+					
+					</form>
+
+
+
+  				</div>
+  		</div>
+  	</div>
+
+
+</section><br><br>
+
+
+
+<!-- ********************* contact us end****************************-->
+
+
+
+
+<!-- ********************* footer start****************************-->
+
+<footer class="footersection" id="footerdiv">
+
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-4 col-md-6 col-12 footer-div ">
+				<div>
+					<h3>About _.Spread_positivity_</h3>
+					<p>about _.Spread_positivity_</p>
+				</div>
+			</div>
+
+			<div class="col-lg-4 col-md-6 col-12 footer-div text-center" >
+				<div>
+					<h3>NAVIGATION LINK</h3>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="inspirational.html">Inspirational</a></li>
+					<li><a href="life.html">Life</a></li>
+					<li><a href="about.html">AboutUs</a></li>
+				</div>
+			</div>
+
+			<div class="col-lg-4 col-md-12 col-12 footer-div ">
+				<div>
+					<h3>About _.Spread_positivity_</h3>
+					<p>About _.Spread_positivity_</p>
+
+					  <div class="container newsletter-main">
+					  	<div class="row">
+					  		<div class="col-lg-12 col-12">
+					  			<div class="input-group mb-3">
+					    		<input type="text" class="form-control news-input" placeholder="Your Email" >
+					    		<div class="input-group-append">
+					      			<span class="input-group-text">Subscribe</span>
+					    		</div>
+					 			</div>
+					  		</div>
+					  	</div>
+					  </div>
+
+				</div>
+			</div>
+		</div>
+
+		<div class="mt-5 text-center">
+			<p>Copyright 2020 All rights reserved | This is made with love by _.Spread_positivity_ </p>
+			
+		</div>
+
+		
+	</div>
+
+</footer>
+
+<!-- ********************* footer end****************************-->
+
+
+
+</body>
+</html>
